@@ -93,18 +93,6 @@ const items = [
 
 ] 
 
-function showItems() {
-    var html = "<table border='1|1'>";
-    for (var i = 0; i < items.length; i++) {
-        html +="<tr>";
-        html += "<td>" +  items[i].name +"</td>"
-        html += "<td>" + items[i].category + "</td>"
-        html += "<td> " + items[i].price + "</td>"
-        html += "<td> " + items[i].stock + "</td>"
-        html +="</tr>";
-    }
-    html +="</table>";
-    document.getElementById("itemsList").innerHTML = html;
-}
+
 
 

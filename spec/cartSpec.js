@@ -24,4 +24,7 @@ var item1
     stock: 5
     }])
   })
+
+  it("a")
+
 })
