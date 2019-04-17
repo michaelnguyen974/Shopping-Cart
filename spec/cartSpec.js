@@ -53,5 +53,13 @@ describe("Cart", () => {
     })
 
   })
+
+  it("Removes items from cart", () => {
+    cart.add(item1)
+    cart.add(item2)
+    cart.add(item3)
+    cart.removeItem(item1)
+    expect(cart.cartArray).toEqual([item2, item3])
+  })
  
 })

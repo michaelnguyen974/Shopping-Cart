@@ -15,4 +15,9 @@ class Cart {
     return reducedTotal
   }
 
+  removeItem(item) {
+      var position = this.cartArray.lastIndexOf(item)
+      this.cartArray.splice(position, 1)
+  }
+
 }
