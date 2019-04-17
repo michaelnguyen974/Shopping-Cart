@@ -20,37 +20,39 @@ var item1
   }
   })
 
-
-  it("cart has an array of items", () => {
-    expect(cart.cartArray).toEqual([])
-  })
-
-  it("adds an item to the cart", () => {
-    cart.add(item1)
-    expect(cart.cartArray).toEqual(
-    [{ id: 0, 
-    name: "Almond Toe Court Shoes, Patent Black", 
-    category: "Women’s Footwear",
-    price: 99.00,
-    stock: 5
-    }])
-  })
-
-  it("Checks for total in the cart", () => {
-    cart.add(item1)
-    cart.add(item2)
-    cart.calculateTotal()
-    expect(cart.total).toEqual(141.00)
-  })
+  describe("adding to array", () => {
+    it("cart has an array of items", () => {
+      expect(cart.cartArray).toEqual([])
+    })
   
-  it("Checks for total in the cart", () => {
-    cart.add(item1)
-    cart.add(item2)
-    cart.add(item3)
-    cart.calculateTotal()
-    expect(cart.total).toEqual(175.00)
+    it("adds an item to the cart", () => {
+      cart.add(item1)
+      expect(cart.cartArray).toEqual(
+      [{ id: 0, 
+      name: "Almond Toe Court Shoes, Patent Black", 
+      category: "Women’s Footwear",
+      price: 99.00,
+      stock: 5
+      }])
+    })
   })
 
+  describe("Total price in cart", () => {
+    it("Checks total in the cart for two items", () => {
+      cart.add(item1)
+      cart.add(item2)
+      cart.calculateTotal()
+      expect(cart.total).toEqual(141.00)
+    })
 
+    it("Checks for total in the cart for more than two items", () => {
+      cart.add(item1)
+      cart.add(item2)
+      cart.add(item3)
+      cart.calculateTotal()
+      expect(cart.total).toEqual(175.00)
+    })
 
+  })
+ 
 })
