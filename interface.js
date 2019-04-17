@@ -2,6 +2,8 @@ function iniitalize () {
   var itemList = "<table border='1|1'>";
   var shoppingCartList = document.getElementById("shoppingCartList")
   var total = document.getElementById("total")
+  
+  var deleteItems = document.getElementsByClassName('delete-item') 
 
   var cart = new Cart
     
@@ -22,7 +24,8 @@ function iniitalize () {
   function renderCart() {
     var print = "";
     for (let index = 0; index < cart.cartArray.length; index++) {
-      print += "<br>" + cart.cartArray[index].name + cart.cartArray[index].price
+      print +=  `<p id=${cart.cartArray[index].id}>` +  cart.cartArray[index].name + cart.cartArray[index].price 
+      + `<button class='delete-item' id=${cart.cartArray[index].id}>Remove from cart</button> </p>`
     }
     return print
   }
@@ -31,6 +34,15 @@ function iniitalize () {
     cart.calculateTotal()
     return cart.total
   }
+
+  function removeItem() {
+    for (let index = 0; index < deleteItems.length; index++) {
+      deleteItems[i].addEventListener('click', () => {
+        cart.deleteItem()
+      })
+    }
+  }
+
 
   function addToButtonFunctionality() {
     for (let index = 0; index < items.length; index++) {
@@ -42,9 +54,10 @@ function iniitalize () {
       })
     }
   }
+
   showItems()
   addToButtonFunctionality() 
-
+  removeItem()
 }
 
 
