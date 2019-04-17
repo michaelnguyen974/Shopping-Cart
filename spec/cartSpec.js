@@ -11,6 +11,13 @@ var item1
     price: 42.00,
     stock: 4
     }
+    item3 = {
+      id: 2,
+      name: "Leather Driver Saddle Loafers, Tan",
+      category: "Men’s Footwear",
+      price: 34.00,
+      stock: 12
+  }
   })
 
 
@@ -34,6 +41,14 @@ var item1
     cart.add(item2)
     cart.calculateTotal()
     expect(cart.total).toEqual(141.00)
+  })
+  
+  it("Checks for total in the cart", () => {
+    cart.add(item1)
+    cart.add(item2)
+    cart.add(item3)
+    cart.calculateTotal()
+    expect(cart.total).toEqual(175.00)
   })
 
 

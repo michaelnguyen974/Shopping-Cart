@@ -9,10 +9,10 @@ class Cart {
   }
 
   calculateTotal() {
-    this.cartArray.forEach( (value, index, array) => {
-      return this.total += value.price
-    })
-    
+    var reducedTotal = this.cartArray.reduce( (previous, current) => {
+      return this.total = previous + current.price
+    },0)
+    return reducedTotal
   }
 
 }

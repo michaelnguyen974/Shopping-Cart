@@ -1,6 +1,7 @@
 function iniitalize () {
   var itemList = "<table border='1|1'>";
   var shoppingCartList = document.getElementById("shoppingCartList")
+  var total = document.getElementById("total")
 
   var cart = new Cart
     
@@ -26,12 +27,18 @@ function iniitalize () {
     return print
   }
 
+  function renderTotal(){
+    cart.calculateTotal()
+    return cart.total
+  }
 
   function addToButtonFunctionality() {
     for (let index = 0; index < items.length; index++) {
       document.getElementById(index).addEventListener('click', () => {
         cart.add(items[index])
         shoppingCartList.innerHTML = renderCart()
+        total.innerHTML = renderTotal()
+
       })
     }
   }
