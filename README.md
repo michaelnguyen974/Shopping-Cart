@@ -25,8 +25,7 @@ are as follows:
 To run test suite (google chrome)
 ```
 open SpecRunner
-Cmd + Option + i if you are on MAC 
-ctrl + shift + j if you are on linux/windows 
+ 
 ```
 
 To run the app
