@@ -85,7 +85,7 @@ const items = [
   },
   {
       id: 12,
-      name: "Mid Twist Cut­Out Dress, Pink",
+      name: "Mid Twist Cut­ Out Dress, Pink",
       category: "Women’s Formalwear",
       price: 540.00,
       stock: 5
