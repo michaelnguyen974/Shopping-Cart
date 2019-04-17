@@ -55,13 +55,14 @@ As a User,
 So I can buy multiple products,
 I would like to add multiple products to my shopping cart
 
+As a User,
+So I can check how much I need to pay,
+I would like to view the total price for the products in my shopping cart
+
 As a User, 
 So I can get rid off unnecessary things in my cart,
 I would like a feature to remove products from my shopping cart
 
-As a User,
-So I can check how much I need to pay,
-I would like to view the total price for the products in my shopping cart
 
 As a User,
 So I can save money,
