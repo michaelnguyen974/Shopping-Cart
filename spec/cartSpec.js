@@ -1,6 +1,5 @@
 describe("Cart", () => {
-var cart
-var item1
+
   beforeEach(() => {
     cart = new Cart
     item1 = { id: 0, name: "Almond Toe Court Shoes, Patent Black", category: "Women’s Footwear",
