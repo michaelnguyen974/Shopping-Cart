@@ -35,9 +35,11 @@ open index.html
 
 ## My approach
 My initial thoughts on this task was to use Vanilla JS, as I am more used to this tech stack.
+
 **1.** Firstly, my approach was to have all the items viewed in a table. 
 ![Imgur](https://imgur.com/rcQdMsM.png)
 By doing this. I would easily be able to add an "add to cart" button and have them linked to each item in the items list.
+
 ![Imgur](https://imgur.com/jw1vLaN.png)
 It made sense for me to include the buttons in the table, so that I had a clear view that each button was attached to each item.
 
