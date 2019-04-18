@@ -34,7 +34,24 @@ open index.html
 ```
 
 ## My approach
-In this attempt, I am using the Jasmine Framework to test my code. The items are stored in a separate file and looks aesthetically better in terms of code and functionality.
+My initial thoughts on this task was to use Vanilla JS, as I am more used to this tech stack.
+**1.** Firstly, my approach was to have all the items viewed in a table. 
+![Imgur](https://imgur.com/rcQdMsM.png)
+By doing this. I would easily be able to add an "add to cart" button and have them linked to each item in the items list.
+![Imgur](https://imgur.com/jw1vLaN.png)
+It made sense for me to include the buttons in the table, so that I had a clear view that each button was attached to each item.
+
+**2.** Next, it made sense for the "add to cart" buttons to add each individual item to the shopping cart with it's name and price.
+![Imgur](https://imgur.com/d66gZP7.png)
+
+**3.** Now that items were being added to the cart, there were two options I could take - the first would be removing items from the cart, or to calculate the total in the cart. I thought it would make sense to calculate the total first in the cart so that when I added the removing feature, the total in the cart would be dynamically generated as items would be removed from my array. 
+![Imgur](https://imgur.com/XAnf2X5.png)
+
+**4.** Since the total was now being generated dynamically when items were added to the array, I could now add the remove item function which would not only remove from the cart, but at the same time update the total as items were being removed.
+![Imgur](https://imgur.com/IfYoNLw.png)
+
+**After removing from cart**
+![Imgur](https://imgur.com/78OvIPy.png)
 
 
 User stories in priority order (broken down): 
