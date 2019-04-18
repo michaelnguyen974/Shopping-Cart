@@ -2,63 +2,52 @@ function iniitalize () {
   var itemList = "<table border='1|1'>";
   var shoppingCartList = document.getElementById("shoppingCartList")
   var total = document.getElementById("total")
-  
-  var deleteItems = document.getElementsByClassName('delete-item') 
 
   var cart = new Cart
     
   function showItems() {
-    for (var i = 0; i < items.length; i++) {
-        itemList +="<tr>";
-        itemList += "<td>" +  items[i].name + "</td>"
-        itemList += "<td>" + items[i].category + "</td>"
-        itemList += "<td> " + items[i].price + "</td>"
-        itemList += "<td> " + items[i].stock  + "</td>" 
-        itemList += ` <td> <button id=${items[i].id}>add to cart</button> </td>`
-        itemList +="</tr>";
-    }
+    items.forEach( function(item, index){
+      itemList +="<tr>";
+      itemList += "<td>" +  item.name + "</td>"
+      itemList += "<td>" + item.category + "</td>"
+      itemList += "<td> " + item.price + "</td>"
+      itemList += "<td> " + item.stock  + "</td>" 
+      itemList += ` <td> <button id=${index}>add to cart</button> </td>`
+      itemList +="</tr>";
+    })
     itemList += "</table>";
     document.getElementById("itemsList").innerHTML = itemList;
   }
 
   function renderCart() {
-    var print = "";
-    for (let index = 0; index < cart.cartArray.length; index++) {
-      print +=  `<p id=${cart.cartArray[index].id}>` +  cart.cartArray[index].name + cart.cartArray[index].price 
-      + `<button class='delete-item' id=${cart.cartArray[index].id}>Remove from cart</button> </p>`
-    }
-    return print
+    shoppingCartList.innerHTML = '';
+    cart.cartArray.forEach(function(element) {
+      shoppingCartList.innerHTML += `<p id="cart${element.id}">${element.name} ${element.price}<button id="remove${element.id}">Remove from cart</button></p>`;
+      var removeButton = document.getElementById('remove'+element.id);
+      removeButton.addEventListener('click', function() {
+        cart.removeItem(element);
+        renderCart();
+        renderTotal();
+      });
+    })
   }
 
   function renderTotal(){
-    cart.calculateTotal()
-    return cart.total
+    total.innerHTML = "£" + cart.calculateTotal();
   }
-
-  function removeItem() {
-    for (let index = 0; index < deleteItems.length; index++) {
-      deleteItems[i].addEventListener('click', () => {
-        cart.deleteItem()
-      })
-    }
-  }
-
 
   function addToButtonFunctionality() {
-    for (let index = 0; index < items.length; index++) {
+    items.forEach( function(element, index) {
       document.getElementById(index).addEventListener('click', () => {
-        cart.add(items[index])
-        shoppingCartList.innerHTML = renderCart()
-        total.innerHTML = renderTotal()
-
+        cart.add(element)
+        renderCart();
+        renderTotal();
       })
-    }
+    })
   }
 
   showItems()
-  addToButtonFunctionality() 
-  removeItem()
+  addToButtonFunctionality()
 }
-
 
 window.addEventListener("DOMContentLoaded", iniitalize)
