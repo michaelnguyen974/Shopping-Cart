@@ -46,6 +46,7 @@ By doing this. I would easily be able to add an "add to cart" button and have th
 It made sense for me to include the buttons in the table, so that I had a clear view that each button was attached to each item.
 
 **2.** Next, it made sense for the "add to cart" buttons to add each individual item to the shopping cart with it's name and price.
+
 ![Imgur](https://imgur.com/d66gZP7.png)
 
 **3.** Now that items were being added to the cart, there were two options I could take - the first would be removing items from the cart, or to calculate the total in the cart. I thought it would make sense to calculate the total first in the cart so that when I added the removing feature, the total in the cart would be dynamically generated as items would be removed from my array. 
