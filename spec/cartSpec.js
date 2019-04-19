@@ -80,6 +80,14 @@ describe("Cart", () => {
       expect(cart.total).toEqual(94.00)
     })
 
+    it("applied voucher of 5off and reduces total down by £5 for more than one item", () => {
+      cart.add(item1)
+      cart.add(item2)
+      cart.calculateTotal()
+      cart.applyVoucher("5off")
+      expect(cart.total).toEqual(136.00)
+    })
+
   })
  
 })
