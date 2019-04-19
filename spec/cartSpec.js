@@ -72,6 +72,13 @@ describe("Cart", () => {
     })
   })
 
+  describe("Voucher", () => {
+    it("applied voucher of 5off and reduces total down by £5", () => {
+      cart.add(item1)
+      cart.applyVoucher("5off")
+      expect(cart.total).toEqual(94.00)
+    })
 
+  })
  
 })
