@@ -27,5 +27,19 @@ class Cart {
     if(voucher_input === "10off" && this.total > 50) {
       return this.total -= 10
     }
+    if(this.containsFootWear(voucher_input)) {
+      return this.total -= 15
+    }
+  }
+
+  containsFootWear(voucher_input) {
+    for (let index = 0; index < cart.cartArray.length; index++) {
+      if (voucher_input === "15off" && cart.cartArray[index].category.includes("Footwear")) {
+        return true
+      } else {
+        return false
+      }
+      
+    }
   }
 }

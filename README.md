@@ -33,6 +33,7 @@ To run the app
 open index.html
 ```
 
+
 ## My approach
 My initial thoughts on this task was to use Vanilla JS, as I am more used to this tech stack.
 
@@ -87,7 +88,6 @@ I would like to view the total price for the products in my shopping cart
 As a User, 
 So I can get rid off unnecessary things in my cart,
 I would like a feature to remove products from my shopping cart
-
 
 As a User,
 So I can save money,
