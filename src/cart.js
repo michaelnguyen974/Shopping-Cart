@@ -23,6 +23,9 @@ class Cart {
   applyVoucher(voucher_input) {
     if (voucher_input === "5off") {
       return this.total -= 5
+    } 
+    if(voucher_input === "10off" && this.total > 50) {
+      return this.total -= 10
     }
   }
 }
