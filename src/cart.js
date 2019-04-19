@@ -34,12 +34,11 @@ class Cart {
 
   containsFootWear(voucher_input) {
     for (let index = 0; index < cart.cartArray.length; index++) {
-      if (voucher_input === "15off" && cart.cartArray[index].category.includes("Footwear")) {
+      if (voucher_input === "15off" && this.total > 75 &&cart.cartArray[index].category.includes("Footwear")) {
         return true
       } else {
         return false
       }
-      
     }
   }
 }

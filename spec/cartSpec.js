@@ -109,6 +109,7 @@ describe("Cart", () => {
       cart.applyVoucher("15off")
       expect(cart.total).toEqual(84)
     })
+    
 
   })
  
