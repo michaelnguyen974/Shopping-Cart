@@ -96,6 +96,13 @@ describe("Cart", () => {
       expect(cart.total).toEqual(131.00)
     })
 
+    it("apply voucher of 10off to cart that has total < 50 does not work", () => {
+      cart.add(item2)
+      cart.calculateTotal()
+      cart.applyVoucher("10off")
+      expect(cart.total).toEqual(42)
+    })
+
   })
  
 })
