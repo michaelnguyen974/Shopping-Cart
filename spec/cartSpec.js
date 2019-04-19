@@ -19,7 +19,7 @@ describe("Cart", () => {
   }
   })
 
-  describe("adding to array", () => {
+  describe("adds to cart", () => {
     it("cart has an array of items", () => {
       expect(cart.cartArray).toEqual([])
     })
