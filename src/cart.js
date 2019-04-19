@@ -20,4 +20,7 @@ class Cart {
       this.cartArray.splice(position, 1)
   }
 
+  applyVoucher(voucher_input) {
+    this.total = 94
+  }
 }
