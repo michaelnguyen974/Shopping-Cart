@@ -26,17 +26,17 @@ describe("Cart", () => {
   
     it("adds an item to the cart", () => {
       cart.add(item1)
-      expect(cart.cartArray).toEqual(
-      [{ id: 0, 
-      name: "Almond Toe Court Shoes, Patent Black", 
-      category: "Women’s Footwear",
-      price: 99.00,
-      stock: 5
-      }])
+      expect(cart.cartArray).toEqual([item1])
     })
   })
 
   describe("Total price in cart", () => {
+
+    it("checks that total starts at 0", () => {
+      expect(cart.total).toEqual(0)
+    })
+
+
     it("Checks total in the cart for two items", () => {
       cart.add(item1)
       cart.add(item2)
@@ -54,12 +54,24 @@ describe("Cart", () => {
 
   })
 
-  it("Removes items from cart", () => {
-    cart.add(item1)
-    cart.add(item2)
-    cart.add(item3)
-    cart.removeItem(item1)
-    expect(cart.cartArray).toEqual([item2, item3])
+  describe("removes items from the cart", () => {
+    it("Removes item from cart", () => {
+      cart.add(item1)
+      cart.add(item2)
+      cart.add(item3)
+      cart.removeItem(item1)
+      expect(cart.cartArray).toEqual([item2, item3])
+    })
+  
+    it("Removes item from different positions from cart", () => {
+      cart.add(item1)
+      cart.add(item2)
+      cart.add(item3)
+      cart.removeItem(item3)
+      expect(cart.cartArray).toEqual([item1, item2])
+    })
   })
+
+
  
 })
