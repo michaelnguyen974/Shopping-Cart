@@ -106,3 +106,11 @@ So I don't accidentally add an out of stock product,
 I cannot add out of stock products to my basket  
 
 ```
+
+## Resources used
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+
+## Acknowledgements 
+- Thank you to Deloitte for allowing me to attempt this tech test!
+- Makers Academy
