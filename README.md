@@ -62,6 +62,8 @@ It made sense for me to include the buttons in the table, so that I had a clear 
 
 ![Imgur](https://imgur.com/78OvIPy.png)
 
+**5.** The logic for the 
+
 
 User stories in priority order (broken down): 
 ```
@@ -92,7 +94,7 @@ I would like a feature to remove products from my shopping cart
 As a User,
 So I can save money,
 I would like to apply a voucher to my shopping cart
-
+-------------------------------------------------------------------------- Where I got up to in 3 days of doing work 
 As a User,
 So I can see how much I have saved, 
 I would like to view the total price with the discounts applied
