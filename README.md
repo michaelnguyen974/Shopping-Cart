@@ -62,7 +62,7 @@ It made sense for me to include the buttons in the table, so that I had a clear 
 
 ![Imgur](https://imgur.com/78OvIPy.png)
 
-**5.** The logic for the 
+**5.** The logic for the voucher has been written but not fully implemented in the frontend interface. However if I did finish this aspect of the test, then I would have created an input on the frontend, create a voucher class and have that input.value set to the parameter of the voucher class, which would then get evaluated by the logic I have created. 
 
 
 User stories in priority order (broken down): 
