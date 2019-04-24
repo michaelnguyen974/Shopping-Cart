@@ -1,4 +1,4 @@
-function iniitalize () {
+var iniitalize = () => {
   var itemList = "<table border='1|1'>";
   var shoppingCartList = document.getElementById("shoppingCartList")
   var total = document.getElementById("total")
