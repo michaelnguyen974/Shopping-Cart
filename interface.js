@@ -6,7 +6,7 @@ function iniitalize () {
   var cart = new Cart
     
   function showItems() {
-    items.forEach( function(item, index){
+    items.forEach( (item, index) => {
       itemList +="<tr>";
       itemList += "<td>" +  item.name + "</td>"
       itemList += "<td>" + item.category + "</td>"
@@ -19,12 +19,12 @@ function iniitalize () {
     document.getElementById("itemsList").innerHTML = itemList;
   }
 
-  function renderCart() {
+  var renderCart = () => {
     shoppingCartList.innerHTML = '';
-    cart.cartArray.forEach(function(element) {
+    cart.cartArray.forEach( (element) => {
       shoppingCartList.innerHTML += `<p id="cart${element.id}">${element.name} ${element.price}<button id="remove${element.id}">Remove from cart</button></p>`;
       var removeButton = document.getElementById('remove'+element.id);
-      removeButton.addEventListener('click', function() {
+      removeButton.addEventListener('click', () => {
         cart.removeItem(element);
         renderCart();
         renderTotal();
@@ -32,12 +32,12 @@ function iniitalize () {
     })
   }
 
-  function renderTotal(){
+  var renderTotal = () => {
     total.innerHTML = "£" + cart.calculateTotal();
   }
 
-  function addToButtonFunctionality() {
-    items.forEach( function(element, index) {
+  var addToButtonFunctionality = () => {
+    items.forEach( (element, index) => {
       document.getElementById(index).addEventListener('click', () => {
         cart.add(element)
         renderCart();
